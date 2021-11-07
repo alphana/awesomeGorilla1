@@ -1,0 +1,19 @@
+{
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": {
+    "description": "Package handlers Products API",
+    "version": "0.0.1"
+  },
+  "host": "localhost",
+  "basePath": "/products",
+  "paths": {}
+}
