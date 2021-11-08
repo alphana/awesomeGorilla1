@@ -31,6 +31,12 @@ func NewProducts(l *log.Logger) *ProductsHandler {
 	return &ProductsHandler{l}
 }
 
+// swagger:route GET /products products listProducts
+// Return a list of products from the database
+// responses:
+//	200: productsResponse
+
+// GetProducts ListAll handles GET requests and returns all current products
 func (product *ProductsHandler) GetProducts(response http.ResponseWriter, request *http.Request) {
 
 	product.logger.Println("GET Method Called")
@@ -44,6 +50,12 @@ func (product *ProductsHandler) GetProducts(response http.ResponseWriter, reques
 
 }
 
+// swagger:route POST /products products listProducts
+// Return a list of products from the database
+// responses:
+//	200: productsResponse
+
+// PostProduct  handles post requests and returns all current products
 func (product *ProductsHandler) PostProduct(response http.ResponseWriter, request *http.Request) {
 	product.logger.Println("POST Method Called")
 	newProductP := request.Context().Value(KeyProduct{}).(data.Product)
