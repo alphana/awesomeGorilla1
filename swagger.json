@@ -11,14 +11,37 @@
   "swagger": "2.0",
   "info": {
     "description": "Package handlers Products API",
-    "version": "0.0.1",
-    "title": "Products API"
+    "version": "0.0.1"
   },
   "host": "localhost",
   "basePath": "/products",
   "paths": {
     "/products": {
       "get": {
+        "description": "Return a list of products from the database",
+        "tags": [
+          "products"
+        ],
+        "operationId": "listProducts",
+        "responses": {
+          "200": {
+            "$ref": "#/responses/productsResponse"
+          }
+        }
+      },
+      "put": {
+        "description": "Return a list of products from the database",
+        "tags": [
+          "products"
+        ],
+        "operationId": "listProducts",
+        "responses": {
+          "200": {
+            "$ref": "#/responses/productsResponse"
+          }
+        }
+      },
+      "post": {
         "description": "Return a list of products from the database",
         "tags": [
           "products"

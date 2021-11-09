@@ -54,7 +54,6 @@ func (product *ProductsHandler) GetProducts(response http.ResponseWriter, reques
 // Return a list of products from the database
 // responses:
 //	200: productsResponse
-
 // PostProduct  handles post requests and returns all current products
 func (product *ProductsHandler) PostProduct(response http.ResponseWriter, request *http.Request) {
 	product.logger.Println("POST Method Called")
@@ -62,6 +61,11 @@ func (product *ProductsHandler) PostProduct(response http.ResponseWriter, reques
 	data.PostProduct(&newProductP)
 }
 
+// swagger:route PUT /products products listProducts
+// Return a list of products from the database
+// responses:
+//	200: productsResponse
+// PostProduct  handles post requests and returns all current products
 func (product *ProductsHandler) PutProduct(response http.ResponseWriter, request *http.Request) {
 	product.logger.Println("PUT Method Called")
 
